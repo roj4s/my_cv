@@ -1,0 +1,411 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.3 (22/9/2018)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% v1.3 author:
+% Zachary Taylor
+%
+% v1.3 repository:
+% https://github.com/ZDTaylor/Deedy-Resume-Reversed
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Add various styling and section options and allow for multiple pages smoothly.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.3:
+% 1. Removed MacFonts version as I have no desire to maintain it nor access to macOS
+% 2. Switched column ordering
+% 3. Changed font styles/colors for easier human readability
+% 4. Added, removed, and rearranged sections to reflect my own experience
+% 5. Hid last updated
+%
+% v1.2:
+% 1. Added publications in place of societies.
+% 2. Collapsed a portion of education.
+% 3. Fixed a bug with alignment of overflowing long last updated dates on the top right.
+%
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-reversed}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% Place Page X of Y on the right-hand
+% side of the footer
+\fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage} }
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Luis Miguel Rojas Aguilera}{ %\urlstyle{same}\href{http://example.com}{example.com}| \href{http://example2.co}{example2.co}\\
+ \href{https://github.com/roj4s}{github.com/roj4s} | \href{mailto:rojas.luis.mail@gmail.com}{rojas.luis.mail@gmail.com} | \href{tel:+5592982114961}{+55 (92) 982114961}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.6\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{StackSpotAI (ai.stackspot.com)}
+\descript{| Full-Stack Engineer }
+\location{Apr 2024 – Currently}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developed a AI Developer assistant using Retrieval Augmentation (Langchain, PGVector, PymuPDF), LLMs and Embeddings models (OpenAI).
+\item REST APIs using FastApi, sqlAlchemy, Redis.
+\item Services orchestration and deploy with Docker, Github Actions and Terraform.
+\item Monitoring and observability with Datadog, Graphana, Metabase Cloudwatch and Langsmith.
+\item Cloud-based solutions using Kafka (AWS MSK), SNS, Lambda functions, APIGateway, DynamoDB.
+\item Front-end UI components with React, react-redux, react-router, MUI.
+\item Unit\&Integration tests with pytest, jest and cypress.
+\item BFF services using AWS lambda functions, APIGateway and DynamoDB.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Vortigo (platform.vease.ai)}
+\descript{| FullStack Engineer }
+\location{Apr 2024 – Nov 2024}
+\begin{tightemize}
+\item RAG-based Chatbot from PDF documents (OpenAI, Bedrock, PGVector, Langchain, PymuPDF).
+\item REST APIs using FastApi, pymongo, Redis.
+\item Front-end with NextJS, shadcn, tailwind.
+\item AWS Lambda functions for embedding indexing from PDF documents integrated with SNS and S3. 
+\item Services orchestration and deploy with Docker, EKS and Azure pipelines.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{FTLNetworkX}
+\descript{| Python Developer }
+\location{May 2024 – Jul 2024}
+\begin{tightemize}
+\item Platform for in-house router's appliances network data analysis.
+\item Implemented services to collect network data from OpenSense API on FreeBSD and store to ClickHouse database and Graphana, using FastApi.
+\item Create Graphana dashboards with aggregations on top of ClickHouse records.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Magic Payments (magic-21.mintlify.app)}
+\descript{| FullStack Web Developer }
+\location{Aug 2023 – May 2024}
+\begin{tightemize}
+\item Payment gateway for transactions between bank checking accounts.
+\item Full-Stack Web development with Django, NextJs, shadcn and TailwindCss
+\item REST APIs with Django Rest Framework.
+\item Webhooks integrations with Dwolla and Plaid for banking operations.
+\item CI/CD pipelines with Docker and Github actions.
+\item Unit tests with pytest and jest.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Underwriter Labs (ul.com)}
+\descript{| FullStack Web Developer }
+\location{March 2023 – Aug 2023}
+\begin{tightemize}
+\item Full-Stack Web development with NodeJs, Vue (vuetify), Quasar and TailwindCss.
+\item Vue.js to develop dynamic and interactive user interfaces.
+\item Configuration of auto-scaling groups, load balancers and AWS services like EC2, S3, RDS, and Lambda functions.
+\end{tightemize}
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.33\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\fontsize{8pt}{10pt}\selectfont
+\section{\fontsize{12}{15}\selectfont Education}
+
+\subsection{\fontsize{10}{12}\selectfont Master's Degree in Computer Sciences}
+\descript{\fontsize{8}{10}\selectfont Universidade Federal do Amazonas, Brasil (UFAM ufam.edu.br)}
+\location{\fontsize{8}{10}\selectfont March 2015 - March 2017}
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Nanodegree Machine Learning Engineer}
+\descript{\fontsize{8}{10}\selectfont Udacity}
+\location{\fontsize{8}{10}\selectfont Jan 2019 - Jan 2020}
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Bachelor's Degree in Informatics}
+\descript{\fontsize{8}{10}\selectfont UCI (Havana, Cuba)}
+\location{\fontsize{8}{10}\selectfont Jan 2010 - Feb 2014}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\fontsize{12}{15}\selectfont Skills}
+\subsection{\fontsize{10}{12}\selectfont Programming}
+\location{9+ years:}
+Python \textbullet{} JavaScript \textbullet{} Bash \\
+\location{5+ years:}
+C++ \textbullet{} PHP \textbullet{} TypeScript \textbullet{} LaTeX\\
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Technology}
+Git/Github \textbullet{} AWS \textbullet{} Linux \\
+React \textbullet{} NextJs \textbullet{} Angular \textbullet{} Vue \textbullet{} ExtJs\\
+Django \textbullet{} FastApi \textbullet{} Flask \textbullet{}  Tornado \\
+EKS \textbullet{} CloudWatch \textbullet{} Lambda \textbullet{} DynamoDb \textbullet{} APIGateway \textbullet{} SNS  \textbullet{} SQS \textbullet{} SAM \textbullet{} Localstack \textbullet{} MKS \textbullet{} RabbitMQ\\
+Cypress \textbullet{} Jest \textbullet{} Pytest\\
+Yii \textbullet{} Symfony\\
+MLFlow \textbullet{} Keras \textbullet{} Tensorflow \textbullet{} pandas \textbullet{} numpy\\
+Docker \textbullet{} Kubernetes \textbullet{} Github Actions \textbullet{} CircleCI \textbullet{} Terraform\\
+Datadog \textbullet{} Graphana \textbullet{} Metabase \textbullet{} ElasticStack\\
+MongoDb \textbullet{} Postgres \textbullet{} MySQL \textbullet{} Clickhouse \textbullet{} DyamoDB \textbullet{} Redis\\
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Management}
+Jira \textbullet{} Confluence \textbullet{} Trello \\
+Scrum \textbullet{} Kanban \textbullet{} RUP \textbullet{} Xtreme Programming \\
+Loom \textbullet{} Notion \textbullet{} Signal\\
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Languages}
+English \textbullet{} TOEFL C2 \textbullet{} Advanced\\
+Spanish \textbullet{} Native\\
+Portuguese \textbullet{} Advanced\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+% \subsection{Graduate}
+% Analysis of Algorithms
+% \sectionsep
+% 
+% \subsection{Undergraduate}
+% Artificial Intelligence \\
+% {\footnotesize \textit{\textbf{(Teaching Assistant) }}} \\
+% AI Robotics \\
+% Operating Systems I \\
+% Calculus I-IV \\
+% Data Analysis I \\
+% Introduction to Probability \\
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Societies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Societies}
+% Association for Computing Machinery (ACM)\\
+% Scrum Alliance Certified ScrumMaster\\
+% University Honors College\\
+% National Merit Scholarship Finalist \\
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Links}
+%Github:// \href{https://github.com/}{\bf JohnDoe} \\
+%LinkedIn://  \href{https://www.linkedin.com/}{\bf johndoe}
+%\sectionsep
+
+\end{minipage}
+
+\newpage
+
+\begin{minipage}[t]{0.6\textwidth}
+
+\runsubsection{PasswordBoss (passwordboss.com)}
+\descript{| FullStack Web Developer }
+\location{Jun 2021 – March 2023}
+\begin{tightemize}
+\item Secure data store and sharing encryption platform.
+\item Full-Stack Web development with Django, NextJs and Tailwindcss.
+\item Progressive web-app implemented with workbox, DexieDB and Electron.
+\item REST APIs using Node.js and Django.
+\item Asymetric encryption algorithms using PGP.
+\item Leveraged Vue.js, Next.js and Tailwind CSS to develop dynamic and responsive user interfaces, collaborating closely with UX/UI designers.
+\item CI/CD pipelines using CircleCI, Docker, and GitHub Actions.
+\item Streamlining the development workflow and ensuring seamless integration of new features and bug fixing.
+\item Docker containers for packaging and deploying applications to AWS infrastructure.
+\item AWS services including SNS, S3, EC2, Lambda, DynamoDb
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Motorola R\&D (Eldorado eldorado.org.br)}
+\descript{| Machine Learning Engineer }
+\location{Oct 2020 – Jun 2021}
+\begin{tightemize}
+\item Tech lead and consultant for Motorola Camera Team.
+\item Computer Vision and AI for image enhancement and reconstruction (deblurring, denoising, demosaicing, super-resolution) for Motorola phone's camera pipeline. 
+\item Serverless solutions with Azure functios and Cosmos DB.
+\item Edge AI for mobile phones: MLFlow, Elastic Stack, PyTorch, Keras, Tensorflow, SNPE, Jupyter, OpenCV, Pandas, Numpy, Singularity, Docker.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Samsung R\&D (SIDIA sidia.com)}
+\descript{| Machine Learning Engineer }
+\location{Feb 2018 – Oct 2020}
+\begin{tightemize}
+\item Tech Lead of New Bussiness Team.
+\item Practical, highly-scalable, AI \& Machine Learning pipelines for Image Classification, Face Recognition, Speech Recognition, Natural Language Processing and Reinforcement Learning.
+\item Distributed architectures with Kubernetes, ZeroMQ and RabbitMQ.
+\item CI/CD with Jenkins, Docker and Azure Pipelines.
+\item Edge AI on Raspberry-Pi, mobile phones and web servers.
+\item Development and testing of AT\&T 5G router operating system.
+\item Stack: Keras, Tensorflow, Jupyter Notebooks, OpenCV, Pandas, Rasa, Spacy, Numpy, h5py.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Triad Systems (itriad.org.br)}
+\descript{| Full-Stack Web Developer }
+\location{Jan 2016 – Feb 2018}
+\begin{tightemize}
+\item Analysis, development and support of ALCATEL's ERP: GlobalTools.
+\item LAMP Stack Agile web development with PHP's Symfony, Django, Yii2, Angular 4, Bootstrap, Jquery, CSS3, HTML5.
+\item Project lead, architect and configuration management.
+\end{tightemize}
+\sectionsep
+
+ \runsubsection{UCI (uci.cu)}
+ \descript{| Software Engineer }
+ \location{Sept 2014 – Jan 2016}
+ \begin{tightemize}
+ \item Development, Test and Documentation of Cuban GNU distro: Nova.
+ \item Analysis, Development and Testing of Cuban Android ROM: NovaDroid.
+ \item Test Automation with Pytest. C++, Python, Linux shell scripting, Android.
+ \item Development of Enterprise software solutions applied on health care used on Cuba's hospitals.
+ \item Intelligent agents nets implemented with Java JADE Framework for Medical Diagnosis and Automatic Schedule Planning.
+ \item Software Solutions for Medical Imaging (OpenCV, Django). 
+ \item Stack: ExtJs, HTML, CSS , Symfony (PHP), Django, Java JADE, Python.
+ \end{tightemize}
+ 
+ \sectionsep
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.33\textwidth}
+
+\section{\fontsize{12}{15}\selectfont Courses \& Certifications}
+
+\subsection{\fontsize{10}{12}\selectfont CPA C++ Certified Associate Programmer}
+\location{\fontsize{8}{10}\selectfont \href{https://verify.openedg.org}{verify.openedg.org} Code: BQ3G.bYgY.TNf5 }
+\location{\fontsize{8}{10}\selectfont May 2022}
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Machine Learning Engineer Nano-Degree}
+\location{\fontsize{8}{10}\selectfont \href{https://confirm.udacity.com/2FCEGTAE}{confirm.udacity.com/2FCEGTAE}}
+\location{\fontsize{8}{10}\selectfont Dec 2019}
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Natural Language Processing (NLP) with Python NLTK}
+\location{\fontsize{8}{10}\selectfont \href{https://ude.my/UC-KXA0IKSD}{ude.my/UC-KXA0IKSD}}
+\location{\fontsize{8}{10}\selectfont Feb 2018}
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Scrum Developer Certified}
+\descript{\fontsize{8}{10}\selectfont ScrumStudy: 671161}
+\location{\fontsize{8}{10}\selectfont Nov 2018}
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Agile Tester (CTFL-AT)}
+\descript{\fontsize{8}{10}\selectfont BSTQB: 18-CTFL-AT-08341-BR(V.2014.br)}
+\location{\fontsize{8}{10}\selectfont Feb 2019}
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont Certified Tester Foundation Level (CTFL)}
+\descript{\fontsize{8}{10}\selectfont BSTQB: 18-CTFL-08070-BR(V.2011.br)}
+\location{\fontsize{8}{10}\selectfont Nov 2018}
+\sectionsep
+
+\subsection{\fontsize{10}{12}\selectfont English as a Foreign Language Institutional Testing Program}
+\descript{\fontsize{8}{10}\selectfont TOEFL: C1 527 Advanced}
+\sectionsep
+
+\section{\fontsize{12}{15}\selectfont Honors \& Awards}
+
+\subsection{\fontsize{10}{12}\selectfont Second Best Paper}
+\descript{\fontsize{8}{10}\selectfont Brasilian Symposium on Information Security}
+\location{\fontsize{8}{10}\selectfont \href{https://sbseg2017.redes.unb.br/index.php/premios/}{sbseg2017.redes.unb.br/index.php/premios/}}
+\location{\fontsize{8}{10}\selectfont Nov 2017}
+\sectionsep
+
+
+\section{\fontsize{12}{15}\selectfont Publications}
+
+\descript{\fontsize{10}{12}\selectfont Automatic Classification of Pterygium-Non Pterygium Images Using Deep Learning}
+\sectionsep
+
+\descript{\fontsize{10}{12}\selectfont Automatic classification of light field smear microscopy patches using Convolutional Neural Networks for identifying mycobacterium tuberculosis}
+\sectionsep
+
+\descript{\fontsize{10}{12}\selectfont Improving the detection of metamorphic malware through data dependency graphs indexing}
+\sectionsep
+
+\descript{\fontsize{10}{12}\selectfont Neuro-fuzzy procedure with application in inferential sensor}
+\sectionsep
+
+\end{minipage}
+
+\end{document}  \documentclass[]{article}
